@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Іс-шаралар</title>
+</head>
+<body>
+    <h1>Іс-шараларға қош келдіңіз!</h1>
+
+    <ul>
+        {% for event in events %}
+            <li><strong>{{ event.title }}</strong> – {{ event.date }} – {{ event.location }}</li>
+        {% empty %}
+            <li>Іс-шаралар әлі жоқ</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
